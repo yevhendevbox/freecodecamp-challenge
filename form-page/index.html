@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project: Survey Form</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title"></h1>
+      <p id="description"></p>
+    </header>
+    <form action="" id="survey-form" class="bg-white shadow-md rounded">
+      <div class="form-group">
+        <label for="name" name="name-label" class="block text-grey-700">Name</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required="required">
+      </div>
+      <div class="form-group">
+        <label for="email" name="email-label" class="block text-grey-700">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+          required="required">
+      </div>
+      <div class="form-group">
+        <label for="age" name="number-label" class="block text-grey-700">Age(optional)</label>
+        <input type="number" id="age" name="age" class="form-control" min="10" max="99" placeholder="Age">
+      </div>
+      <div class="form-group">
+        <p>Which option best describes your current role?</p>
+        <select name="role" id="dropdown" class="form-control" required="required">
+          <option></option>
+          <option disabled selected value="">Select current role</option>
+          <option value="student">Student</option>
+          <option value="job">Full time job</option>
+          <option value="lerner">Full time lerner</option>
+          <option value="no">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
