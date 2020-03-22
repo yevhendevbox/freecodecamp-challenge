@@ -199,3 +199,40 @@ body {
   line-height: 1.5;
   text-align: center;
 }
+.bg-hero {
+  background-image: url(https://www.poynter.org/wp-content/uploads/2020/03/shutterstock_1198847677-scaled.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  opacity: .8;
+}
+.header {
+  padding: 20px 0;
+  color: var(--yellow); 
+}
+.header h1 {
+  margin: 0;
+}
+.form-group {
+  position: relative;
+  padding-block-end: 30px;
+  text-align: left;
+}
+.input-radio, .input-checkbox {
+  margin-right: 10px;
+}
+#survey-form {
+  width: 35vw;
+  margin: 0 auto;
+  padding: 30px;
+}
+.form-group label, .form-group p {
+  padding-block-end: 10px;
+}
+@media (max-width: 768px) {
+  #survey-form {
+    width: 70vw;
+  }
+}

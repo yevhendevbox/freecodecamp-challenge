@@ -10,28 +10,28 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container h-auto bg-hero">
     <header class="header">
-      <h1 id="title"></h1>
-      <p id="description"></p>
+      <h1 id="title">Do you support quarantine?</h1>
+      <p id="description">Please answer a few questions about the situation.</p>
     </header>
     <form action="" id="survey-form" class="bg-white shadow-md rounded">
       <div class="form-group">
-        <label for="name" name="name-label" class="block text-grey-700">Name</label>
-        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required="required">
+        <label for="name" id="name-label" class="block text-grey-700">Name</label>
+        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Enter your name" required="required">
       </div>
       <div class="form-group">
-        <label for="email" name="email-label" class="block text-grey-700">Email</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
-          required="required">
+        <label for="email" id="email-label" class="block text-grey-700">Email</label>
+        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" placeholder="Enter your email" required="required">
       </div>
       <div class="form-group">
-        <label for="age" name="number-label" class="block text-grey-700">Age(optional)</label>
-        <input type="number" id="age" name="age" class="form-control" min="10" max="99" placeholder="Age">
+        <label for="age" id="number-label" class="block text-grey-700">Age(optional)</label>
+        <input type="number" id="number" name="age" class="shadow appearance-none border rounded w-full py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control" min="10" max="99" placeholder="Age">
       </div>
       <div class="form-group">
         <p>Which option best describes your current role?</p>
-        <select name="role" id="dropdown" class="form-control" required="required">
+        <select name="role" id="dropdown" class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-6 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 form-control"
+          required="required">
           <option></option>
           <option disabled selected value="">Select current role</option>
           <option value="student">Student</option>
@@ -40,9 +40,36 @@
           <option value="no">Prefer not to say</option>
           <option value="other">Other</option>
         </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+        </div>
       </div>
+      <div class="form-group">
+        <p>Do you even sit on a quarantine?</p>
+        <label for="" class='block text-grey-700'><input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>Definitely</label>
+        <label for="" class='block text-grey-700'><input type="radio" name="user-recommend" value="maybe" class="input-radio">Maybe</label>
+        <label for="" class='block text-grey-700'><input type="radio" name="user-recommend" value="no" class="input-radio">No, i'm not!</label>
+      </div>
+      <div class="form-group">
+        <p>What's your favorite thing to do at quarantine?</p>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="games">Playing PC games</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="books">Reading books</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="cooking">Cooking</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="sleep">Sleeping</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="family">Family talking</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="coding">Coding</label>
+        <label for="" class="block text-grey-700"><input type="checkbox" name="prefer" class="input-checkbox" value="nothing">Noting</label>
+      </div>
+      <div class="form-group">
+        <p>Any comments about current situation?</p>
+        <textarea name="comment" id="comments" cols="30" rows="10" class="input-textarea shadow appearance-none border rounded w-full py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline form-control"
+          placeholder="Enter your comment..."></textarea>
+      </div>
+      <div class="form-group"><button type="submit" id="submit" class="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-6 px-4 rounded">Submit</button></div>
     </form>
   </div>
+
 </body>
 
 </html>
