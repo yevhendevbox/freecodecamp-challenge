@@ -4,73 +4,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- <script src="https://use.fontawesome.com/4bafd06dc2.js"></script>
+   -->
+  <script src="https://kit.fontawesome.com/a1876bdd30.js" crossorigin="anonymous"></script>
   <title>Product landing page</title>
 </head>
 
 <body>
-  <header class="navbar is-light" id="header" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a href="#" class="navbar-item">
-        <img id='header-img'
-          src="https://images.squarespace-cdn.com/content/v1/58e7bc54ebbd1a4ffd8ad781/1505743183888-GU6ZLGREH8WQ39HGW2K2/ke17ZwdGBToddI8pDm48kK04VnFfzDsiLyJlgVLqpdgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2drwhshVBZlz7PwUl-0K4pT8t9nVNLbVWc76syZzy-RnqCjLISwBs8eEdxAxTptZAUg/FreshDirect.png"
-          alt="Main logo" width="112" height="28">
+  <div id="page-wrapper">
+    <header id="header">
+      <a href="#" id="header-img">
+        <img
+          src="
+        https://images.squarespace-cdn.com/content/v1/58e7bc54ebbd1a4ffd8ad781/1505743183888-GU6ZLGREH8WQ39HGW2K2/ke17ZwdGBToddI8pDm48kK04VnFfzDsiLyJlgVLqpdgUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2drwhshVBZlz7PwUl-0K4pT8t9nVNLbVWc76syZzy-RnqCjLISwBs8eEdxAxTptZAUg/FreshDirect.png"
+          alt="Brand Logo" width="112" height="28">
       </a>
-      <a class="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false"
-        data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <a class="navbar-item">
-          Features
-        </a>
-        <a class="navbar-item">
-          How It works
-        </a>
-        <a class="navbar-item">
-          Pricing
-        </a>
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <a href="#features" class="nav-link">Features</a>
+            <!-- nav-link end -->
+          </li>
+          <li>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <!-- nav-link end -->
+          </li>
+          <li>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <!-- nav-link end -->
+          </li>
+        </ul>
+      </nav>
+      <!-- nav-bar end -->
+    </header>
+    <!-- header end -->
+    <section id="hero">
+      <div class="wrapper">
+        <h2>Fresh vegies at your door!</h2>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <input type="email" id="email" name="email" placeholder="Enter your email adress" required="required">
+          <input type="submit" id="submit" value="Send" class="button">
+        </form>
+        <!-- hero-form end -->
       </div>
-  </header>
-  <div class="container is-widescreen">
-
+      <!-- wrapper end -->
+    </section>
+    <!-- hero section end -->
+    <section id="features">
+      <div class="wrapper">
+        <h2>Why our vegies are worth buying?</h2>
+        <div class="adv-wrap">
+          <div class="adv">
+            <div class="adv-icon">
+              <i class="fas fa-carrot"></i>
+            </div>
+            <div class="adv-description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, tempora error! Obcaecati dolor
+                sint
+                quisquam!</p>
+            </div>
+            <!-- adv-description end -->
+          </div>
+          <!-- adv end -->
+          <div class="adv">
+            <div class="adv-icon">
+              <i class="fas fa-apple-alt"></i>
+            </div>
+            <div class="adv-description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, tempora error! Obcaecati dolor
+                sint
+                quisquam!</p>
+            </div>
+            <!-- adv-description end -->
+          </div>
+          <!-- adv end -->
+          <div class="adv">
+            <div class="adv-icon">
+              <i class="fas fa-pepper-hot"></i>
+            </div>
+            <div class="adv-description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, tempora error! Obcaecati dolor
+                sint
+                quisquam!</p>
+            </div>
+            <!-- adv-description end -->
+          </div>
+          <!-- adv end -->
+        </div>
+        <!-- adv-wrap end -->
+      </div>
+      <!-- wrapper end -->
+    </section>
+    <!-- features end -->
+    <section id="how-it-works">
+      <div class="wrapper">
+        <h2>How we grow and delivery our vegies</h2>
+        <div class="video-wrap">
+          <iframe width="" height="" src="https://www.youtube.com/embed/VjINuQX4hbM" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <!-- wrapper end -->
+    </section>
+    <!-- how-it-works end -->
+    <section id="pricing">
+      <div class="wrapper">
+        <div class="card-wrap">
+          <div class="card">
+            <div class="card-title">Lorem, ipsum dolor.</div>
+            <!-- card-title end -->
+            <div class="price">123</div>
+            <!-- price end -->
+            <ul class="card-description">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </ul>
+            <!-- card-description end -->
+            <button class="button">Select</button>
+          </div>
+          <!-- card end -->
+          <div class="card">
+            <div class="card-title">Lorem, ipsum dolor.</div>
+            <!-- card-title end -->
+            <div class="price">123</div>
+            <!-- price end -->
+            <ul class="card-description">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </ul>
+            <!-- card-description end -->
+            <button class="button">Select</button>
+          </div>
+          <!-- card end -->
+          <div class="card">
+            <div class="card-title">Lorem, ipsum dolor.</div>
+            <!-- card-title end -->
+            <div class="price">123</div>
+            <!-- price end -->
+            <ul class="card-description">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </ul>
+            <!-- card-description end -->
+            <button class="button">Select</button>
+          </div>
+          <!-- card end -->
+        </div>
+        <!-- card-wrapper end -->
+      </div>
+      <!-- wrapper end -->
+    </section>
+    <!-- pricing end -->
+    <footer id="footer">
+      <ul>
+        <li><a href="#" class="footer-link">Contact</a></li>
+        <li><a href="#" class="footer-link">Privecy</a></li>
+        <li><a href="#" class="footer-link">Terms</a></li>
+      </ul>
+    </footer>
+    <!-- footer end -->
   </div>
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-
-          });
-        });
-      }
-
-    });
-  </script>
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </body>
 
 </html>
