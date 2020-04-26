@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a1876bdd30.js" crossorigin="anonymous"></script>
+  <title>Technical Documentation Page</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>JS Arrays Documantation</header>
+    <ul>
+      <li><a href="#description" class="nav-link">Description</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#constructor" class="nav-link">Constructor</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#static-properties" class="nav-link">Static properties</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#static-methods" class="nav-link">Static methods</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#array-instances" class="nav-link">Array instances</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#instance-properties" class="nav-link">Instance properties</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#instance-methods" class="nav-link">Instance methods</a> <!-- /.nav-link -->
+      </li>
+      <li><a href="#examples" class="nav-link">Examples</a> <!-- /.nav-link -->
+      </li>
+    </ul>
+  </nav>
+  <!-- /#navbar -->
+  <main id="main-doc">
+    <section class="main-section" id="description">
+      <hr>
+      <header>Description</header>
+      <article>
+        <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations.
+          Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can
+          change at any time, and data can be stored at non-contiguous locations in the array, JavaScript arrays are not
+          guaranteed to be dense; this depends on how the programmer chooses to use them. In general, these are
+          convenient characteristics; but if these features are not desirable for your particular use, you might
+          consider using typed arrays.</p>
+        <p>Arrays cannot use strings as element indexes (as in an associative array) but must use integers. Setting or
+          accessing via non-integers using bracket notation (or dot notation) will not set or retrieve an element from
+          the array list itself, but will set or access a variable associated with that array's object property
+          collection. The array's object properties and list of array elements are separate, and the array's traversal
+          and mutation operations cannot be applied to these named properties.</p>
+        <h3>Common operetions</h3>
+        <div class="code-block">
+          <p class="pre-title"><strong>Create an Array</strong></p>
+          <pre><code>
+let fruits = ['Apple', 'Banana']
+        
+console.log(fruits.length)
+// 2
+        	  </code></pre>
+        </div>
+        <div class="code-block">
+          <p class="pre-title"><strong>Access (index into) an Array item</strong></p>
+          <pre><code>
+ let first = fruits[0]
+ // Apple
+            
+ let last = fruits[fruits.length - 1]
+// Banana
+            
+        	  </code></pre>
+        </div>
+        <div class="code-block">
+          <p class="pre-title"><strong>Loop over an Array</strong></p>
+          <pre><code>
+fruits.forEach(function(item, index, array) {
+  console.log(item, index)
+ })
+// Apple 0
+// Banana 1
+        	  </code></pre>
+        </div>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="constructor">
+      <hr>
+      <header>Constructor</header>
+      <article>
+        <code>
+          Array();
+        </code>
+        <p>Creates <code>Array</code> objects.</p>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="static-properties">
+      <hr>
+      <header>Static properties</header>
+      <article>
+        <code>
+          Array.length
+        </code>
+        <p>The <code>Array</code> constructor's <code>length</code> property whose value is 1.</p>
+        <code>
+          get Array[@@species]
+        </code>
+        <p>The constructor function that is used to create derived objects.</p>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="static-methods">
+      <hr>
+      <header>Static methods</header>
+      <article>
+        <code>
+          Array.from(arrayLike[, mapFn[, thisArg]])
+        </code>
+        <p>Creates a new <code>Array</code> instance from <code>arrayLike</code>, an array-like or iterable object.</p>
+        <code>
+          Array.isArray(value)
+        </code>
+        <p>Returns <code>true</code> if <code>value</code> is an <code>array</code>, or <code>false</code> otherwise.
+        </p>
+        <code>
+          Array.of(element0[, element1[, ...[, elementN]]])
+        </code>
+        <p>Creates a new <code>Array</code> instance with a variable number of arguments, regardless of number or type
+          of the arguments.</p>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="array-instances">
+      <hr>
+      <header>Array instances</header>
+      <article>
+        <p><code>Array</code> instances inherit from <code>Array.prototype</code>. As with all constructors, you can
+          change the constructor's <code>prototype</code> property to make changes to all <code>Array</code> instances.
+          For example, you can add new methods and properties to extend all <code>Array</code> objects. This is used for
+          polyfilling, for example.</p>
+        <p>However, adding non-standard methods to the array object can cause issues later, either with your own code,
+          or when adding features to JavaScript.</p>
+        <p>Little known fact: <code>Array.prototype</code> itself is an <code>Array</code>:</p>
+        <pre>
+          <code>
+Array.isArray(Array.prototype) // true
+          </code>
+        </pre>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="instance-properties">
+      <hr>
+      <header>Instance properties</header>
+      <article>
+        <p><strong>Mutator methods</strong></p>
+        <ul>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+          <li>
+            <code>Array.prototype.copyWithin(target[, start[, end]])</code>
+            <p>Copies a sequence of array elements within the array.</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="instance-methods">
+      <header>Instance methods</header>
+      <article></article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="examples">
+      <header>Examples</header>
+      <article></article>
+    </section>
+    <!-- /#.main-section -->
+  </main>
+  <!-- /#main-doc -->
+</body>
+
+</html>
