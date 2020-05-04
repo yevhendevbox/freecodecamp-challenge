@@ -18,15 +18,15 @@
       </li>
       <li><a href="#constructor" class="nav-link">Constructor</a> <!-- /.nav-link -->
       </li>
-      <li><a href="#static-properties" class="nav-link">Static properties</a> <!-- /.nav-link -->
+      <li><a href="#static_properties" class="nav-link">Static properties</a> <!-- /.nav-link -->
       </li>
-      <li><a href="#static-methods" class="nav-link">Static methods</a> <!-- /.nav-link -->
+      <li><a href="#static_methods" class="nav-link">Static methods</a> <!-- /.nav-link -->
       </li>
-      <li><a href="#array-instances" class="nav-link">Array instances</a> <!-- /.nav-link -->
+      <li><a href="#array_instances" class="nav-link">Array instances</a> <!-- /.nav-link -->
       </li>
-      <li><a href="#instance-properties" class="nav-link">Instance properties</a> <!-- /.nav-link -->
+      <li><a href="#instance_methods" class="nav-link">Instance methods</a> <!-- /.nav-link -->
       </li>
-      <li><a href="#instance-methods" class="nav-link">Instance methods</a> <!-- /.nav-link -->
+      <li><a href="#instance_properties" class="nav-link">Instance properties</a> <!-- /.nav-link -->
       </li>
       <li><a href="#examples" class="nav-link">Examples</a> <!-- /.nav-link -->
       </li>
@@ -35,8 +35,8 @@
   <!-- /#navbar -->
   <main id="main-doc">
     <section class="main-section" id="description">
-      <hr>
       <header>Description</header>
+      <hr>
       <article>
         <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations.
           Neither the length of a JavaScript array nor the types of its elements are fixed. Since an array's length can
@@ -84,8 +84,8 @@ fruits.forEach(function(item, index, array) {
     </section>
     <!-- /#.main-section -->
     <section class="main-section" id="constructor">
-      <hr>
       <header>Constructor</header>
+      <hr>
       <article>
         <code>
           Array();
@@ -94,9 +94,9 @@ fruits.forEach(function(item, index, array) {
       </article>
     </section>
     <!-- /#.main-section -->
-    <section class="main-section" id="static-properties">
-      <hr>
+    <section class="main-section" id="static_properties">
       <header>Static properties</header>
+      <hr>
       <article>
         <code>
           Array.length
@@ -109,9 +109,9 @@ fruits.forEach(function(item, index, array) {
       </article>
     </section>
     <!-- /#.main-section -->
-    <section class="main-section" id="static-methods">
-      <hr>
+    <section class="main-section" id="static_methods">
       <header>Static methods</header>
+      <hr>
       <article>
         <code>
           Array.from(arrayLike[, mapFn[, thisArg]])
@@ -130,9 +130,9 @@ fruits.forEach(function(item, index, array) {
       </article>
     </section>
     <!-- /#.main-section -->
-    <section class="main-section" id="array-instances">
-      <hr>
+    <section class="main-section" id="array_instances">
       <header>Array instances</header>
+      <hr>
       <article>
         <p><code>Array</code> instances inherit from <code>Array.prototype</code>. As with all constructors, you can
           change the constructor's <code>prototype</code> property to make changes to all <code>Array</code> instances.
@@ -149,9 +149,22 @@ Array.isArray(Array.prototype) // true
       </article>
     </section>
     <!-- /#.main-section -->
-    <section class="main-section" id="instance-properties">
+    <section class="main-section" id="instance_methods">
+      <header>Instance methods</header>
       <hr>
+      <article>
+        <code>Array.prototype.constructor</code>
+        <p>Specifies the function that creates an object's <code>prototype</code>.</p>
+        <code>Array.prototype.length</code>
+        <p>Reflects the number of elements in an array.</p>
+        <code>Array.prototype[@@unscopables]</code>
+        <p>A symbol containing property names to exclude from a <code>with</code> binding scope.</p>
+      </article>
+    </section>
+    <!-- /#.main-section -->
+    <section class="main-section" id="instance_properties">
       <header>Instance properties</header>
+      <hr>
       <article>
         <p><strong>Mutator methods</strong></p>
         <ul>
@@ -183,14 +196,23 @@ Array.isArray(Array.prototype) // true
       </article>
     </section>
     <!-- /#.main-section -->
-    <section class="main-section" id="instance-methods">
-      <header>Instance methods</header>
-      <article></article>
-    </section>
-    <!-- /#.main-section -->
     <section class="main-section" id="examples">
       <header>Examples</header>
-      <article></article>
+      <hr>
+      <article>
+        <h3>Creating an Array</h3>
+        <p>The following example creates an array, <code>msgArray</code>, with a length of 0, then assigns values to
+          <code>msgArray[0]</code> and <code>msgArray[99]</code>, changing the <code>length</code> of the array to 100.
+        </p>
+        <pre><code>
+let msgArray = []
+msgArray[0] = 'Hello'
+msgArray[99] = 'world'
+          
+if (msgArray.length === 100) {
+   console.log('The length is 100.')
+ }</code></pre>
+      </article>
     </section>
     <!-- /#.main-section -->
   </main>
